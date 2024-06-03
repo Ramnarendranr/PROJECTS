@@ -53,16 +53,22 @@ Entered the domain name "www.explorewithram.com" as the redirect target.
 Clicking on the S3 static website hosting endpoint will now redirect users to the ExploreWithRam.com website.
 ```
 
-# The ExploreWithRam.com website is now successfully hosted on Amazon S3 using static website hosting. With proper permissions and configurations in place, the website is accessible to users via the designated domain name.
+## The ExploreWithRam.com website is now successfully hosted on Amazon S3 using static website hosting. With proper permissions and configurations in place, the website is accessible to users via the designated domain name.
 
 
-# S3 Bucket:
+## S3 Bucket:
+<img width="1144" alt="s3-static-website-3" src="https://github.com/Ramnarendranr/PROJECTS/assets/122247354/25f54e4f-d567-40ed-98fa-e24b49d7251a">
 
-# Bucket policy:
 
-# Static website hosting changes:
+## Bucket policy:
+<img width="1131" alt="s3-static-website-4" src="https://github.com/Ramnarendranr/PROJECTS/assets/122247354/9353ac18-3f9e-4b65-bb97-058f4b65c10a">
 
-# Static website hosting endpoint:
+## Static website hosting changes:
+<img width="943" alt="s3-static-website" src="https://github.com/Ramnarendranr/PROJECTS/assets/122247354/92c5d826-3c4d-477c-a18b-f75b7ccce892">
+
+## Static website hosting endpoint:
+<img width="1125" alt="s3-static-website-5" src="https://github.com/Ramnarendranr/PROJECTS/assets/122247354/47eae85a-aa0d-4527-90f1-a4bef1c495f8">
+
 
 # my custom domain:
-
+![s3-static-website-6](https://github.com/Ramnarendranr/PROJECTS/assets/122247354/7107920e-f262-47dd-92cd-197fa7cdd1df)
