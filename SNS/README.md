@@ -152,23 +152,31 @@ Check Cron Logs:
 Verify that the cron job is running and check the output log (/home/ec2-user/cron.log).
 Ensure Cron Service is Running:
 
-sh
-Copy code
 sudo systemctl status crond
 Start the service if it’s not running:
 
-sh
-Copy code
 sudo systemctl start crond
 sudo systemctl enable crond
 ```
+## EMAIL:
+<img width="1470" alt="Screenshot 2024-06-04 at 6 56 29 PM" src="https://github.com/Ramnarendranr/PROJECTS/assets/122247354/88aab6b6-e99f-4ac6-97f2-98e2769757e8">
+
+
 
 ## SNS topic:
-
+<img width="1470" alt="Screenshot 2024-06-04 at 7 07 35 PM" src="https://github.com/Ramnarendranr/PROJECTS/assets/122247354/6fbd44db-bee0-4145-abe5-6a17d1aa4a80">
 
 
 ## EC2 instance:
+<img width="1470" alt="Screenshot 2024-06-04 at 7 08 55 PM" src="https://github.com/Ramnarendranr/PROJECTS/assets/122247354/66c0ca57-fb18-4ad9-9c1f-2a20a8dfbbf3">
+
+## List of commands used:
+<img width="290" alt="Screenshot 2024-06-04 at 7 09 16 PM" src="https://github.com/Ramnarendranr/PROJECTS/assets/122247354/a1d36dfe-7c32-4384-b140-356b712e55f9">
+
 
 ## send email script file:
+<img width="567" alt="Screenshot 2024-06-04 at 7 09 29 PM" src="https://github.com/Ramnarendranr/PROJECTS/assets/122247354/486f2c88-1091-4c7d-b77a-167e7e665cd7">
+
 
 ## crontab:
+<img width="562" alt="Screenshot 2024-06-04 at 7 09 45 PM" src="https://github.com/Ramnarendranr/PROJECTS/assets/122247354/c2f39e2a-d5e8-48f8-997a-0f1a3a4bfafb">
