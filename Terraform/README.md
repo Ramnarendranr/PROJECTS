@@ -30,6 +30,46 @@ In this project, we use Terraform to create and manage an AWS infrastructure tha
 5. Plan the Infrastructure: Run **terraform plan** to see the planned actions that Terraform will take to create your infrastructure. This helps you review and verify the changes before applying them.
 6. Apply the Configuration: Run **terraform apply** to create the infrastructure. Review the proposed changes and type yes to confirm. Terraform will provision the resources as defined in your configuration files.
 
+## Implementation
+
+### VPC and Subnets:
+```
+We define a VPC with a specified CIDR block (var.cidr) and create two subnets (aws_subnet.sub1 and aws_subnet.sub2) within different availability zones (var.availability_zone1 and var.availability_zone2). Each subnet is configured to enable automatic assignment of public IP addresses (map_public_ip_on_launch = true).
+```
+
+### Security Group:
+```
+A security group (aws_security_group.sg) is defined to control inbound and outbound traffic to our EC2 instances. It allows HTTP (port 80) and SSH (port 22) traffic from any IP (0.0.0.0/0).
+```
+
+### S3 Bucket:
+```
+An AWS S3 bucket (aws_s3_bucket.example) is provisioned to store application data and assets.
+```
+
+### EC2 Instances:
+```
+Two EC2 instances (aws_instance.webserver1 and aws_instance.webserver2) are launched. Each instance uses the specified AMI (var.ami_id) and instance type (var.instance_type). Importantly, each instance is configured with unique user data scripts (userdata1.sh and userdata2.sh) to customize their configuration upon boot.
+```
+
+### Application Load Balancer (ALB):
+```
+An ALB (aws_lb.mylb) is created to distribute incoming HTTP traffic across the EC2 instances. It is associated with both subnets (aws_subnet.sub1 and aws_subnet.sub2) and configured to forward traffic to a target group (aws_lb_target_group.mytg) listening on port 80.
+```
+
+### Route 53 DNS Management:
+```
+We manage DNS records using Route 53 (aws_route53_zone.main and aws_route53_record.info). An Alias record (aws_route53_record.info) is created to route traffic from ${var.subdomain}.${var.domain_name} to the ALB's DNS name (aws_lb.mylb.dns_name).
+```
+
+### User Data Scripts
+```
+userdata1.sh: This script is executed during the launch of aws_instance.webserver1. It configures the instance-specific settings and installs necessary software packages for the application.
+
+userdata2.sh: This script is executed during the launch of aws_instance.webserver2. It includes configurations specific to this instance, ensuring its role in the application environment.
+```
+
+
 ## Configuration Files Explained
 
 1. main.tf:
